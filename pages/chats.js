@@ -24,7 +24,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    if (username === "" || secret === "") {
+    if (username === 0 || secret === 0 ) {
       router.push("/");
     }
   }, [username, secret]);
