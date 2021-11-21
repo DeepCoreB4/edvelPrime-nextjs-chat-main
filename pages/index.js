@@ -14,7 +14,7 @@ const Auth = () => {
   function onSubmit(e) {
     e.preventDefault();
 
-    if (username.length === 0 || secret.length === 0 ) return;// check e.g === 1
+    if (username.length === 1 || secret.length === 1) return;
 
     axios
       .put(
@@ -32,7 +32,7 @@ const Auth = () => {
     <div className="background">
       <div className="auth-container">
         <form className="auth-form" onSubmit={(e) => onSubmit(e)}>
-          <div className="auth-title">EdvelChat</div>
+          <div className="auth-title">NextJS Chat</div>
 
           <div className="input-container">
             <input
@@ -52,7 +52,7 @@ const Auth = () => {
           </div>
 
           <button type="submit" className="submit-button">
-            Login / Registrieren
+            Login / Sign Up
           </button>
         </form>
       </div>
